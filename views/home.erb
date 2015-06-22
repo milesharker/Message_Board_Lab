@@ -1,0 +1,9 @@
+<div>Message Board.</div>
+<div>Hello <%= @name%>.</div>
+<form action="/draw" method="get">
+  <input type="submit" value="Let's Draw"
+         name="Submit" id="frm1_submit" />
+</form>
+<% Post.all.each do |post| %>
+    <img src="<% post.imagedata %>">
+<% end %>

@@ -1,0 +1,19 @@
+<script src="js/draw.js"></script>
+<body onload="init()">
+<canvas id="can" width="600" height="600" style="position:fixed;top:10px;left:10px;border:2px solid;"></canvas>
+<div style="position:fixed;top:615px;left:10px;">Choose Color</div>
+<div style="position:fixed;top:620px;left:100px;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
+<div style="position:fixed;top:620px;left:110px;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+<div style="position:fixed;top:620px;;left:120px;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
+<div style="position:fixed;top:630px;left:100px;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
+<div style="position:fixed;top:630px;left:110px;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
+<div style="position:fixed;top:630px;left:120px;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+<div style="position:fixed;top:635px;left:50px;">Eraser</div>
+<div style="position:fixed;top:640px;left:100px;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+<img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
+<form method="post" action="/save">
+  <input type="hidden" value="" name="imagedata" id="imagedata">
+  <input type="submit" value="Save" id="btn" size="30" onclick="save();" style="position:fixed;top:615px;left:450px;">
+</form>
+<input type="button" value="Clear" id="clr" size="23" onclick="erase()" style="position:fixed;top:615px;left:550px;">
+</body>
